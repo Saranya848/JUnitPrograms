@@ -1,7 +1,6 @@
 package com.bridgelabz;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 //import org.mockito.Mock;
@@ -17,7 +16,7 @@ public class UserDetailsTest {
 	 * the it will pass the test.
 	 */
 	@Test
-	public void isValidInputFn() {
+	public void isValidInputLn() {
 		boolean actualResult = details.lastName("Siripurapu");
 		assertTrue(actualResult);
 
@@ -29,7 +28,7 @@ public class UserDetailsTest {
 	 * false and the it will pass the test.
 	 */
 	@Test
-	public void isInvalidInputFn() {
+	public void isInvalidInputLn() {
 		boolean actualResult = details.lastName("siri");
 		assertFalse(actualResult);
 	}
