@@ -43,4 +43,18 @@ public class UserDetails {
 		}
 		return m.matches();
 	}
+	public boolean pwd(String pwd) {
+		input = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]*[\\@\\#\\^][a-zA-Z0-9]*$";
+
+		// Pattern p = Pattern.complie("((?=.*\\d).{8,20})");
+		Pattern p = Pattern.compile(input);
+		Matcher m = p.matcher(pwd);
+		if (m.matches()==true) {
+			System.out.println("Valid Input");
+		} else {
+			System.out.println("Sorry!! InValid Input");
+			System.out.println("Try valid Input");
+		}
+		return m.matches();
+	}
 }

@@ -72,4 +72,23 @@ public class UserDetailsTest {
 		boolean actualResult1 = details.email("sir@@bl.co.in");
 		Assert.assertFalse(actualResult1);
 	}
+	/**
+	 * Test case to check if the password is valid then result is true and the it will
+	 * pass the test.
+	 */
+	@Test
+	public void isValidPassword() {
+		boolean actualResult = details.pwd("Pass@123");
+		Assert.assertTrue(actualResult);
+	}
+
+	/**
+	 * Test case to check if the password is not valid then result is true and the it
+	 * will fails the test.
+	 */
+	@Test
+	public void isInvalidPassword() {
+		boolean actualResult1 = details.pwd("Password@#123");
+		Assert.assertFalse(actualResult1);
+	}
 }
