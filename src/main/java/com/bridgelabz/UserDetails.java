@@ -48,6 +48,13 @@ public class UserDetails {
 		return m.matches();
 	}
 
+	public boolean phoneNum(String phoneNum) {
+		input = "^[0-9]{2}\\s{1}[0-9]{10}$";
+		Pattern pattern = Pattern.compile(input);
+		Matcher matcher = pattern.matcher(phoneNum);
+		return matcher.matches();
+	}
+
 	public boolean pwd(String pwd) {
 		input = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]*[\\@\\#\\^][a-zA-Z0-9]*$";
 
@@ -59,22 +66,6 @@ public class UserDetails {
 		} else {
 			System.out.println("Sorry!! InValid Input");
 			System.out.println("Try valid Input");
-		}
-		return m.matches();
-	}
-
-	public boolean phoneNum(String number) {
-		input = "^([0-9]{2}[\\s]){1}[0-9]{9,10}$";
-
-		Pattern p = Pattern.compile(input);
-		Matcher m = p.matcher(number);
-		System.out.println(m.matches());
-		if(m.matches()) {
-			System.out.println("Phone NUmber is Valid");
-		}
-		else {
-			System.out.println("Phone NUmber is Not Valid");
-
 		}
 		return m.matches();
 	}

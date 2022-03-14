@@ -1,5 +1,8 @@
 package com.bridgelabz;
 
+//import static org.junit.Assert.assertFalse;
+//import static org.junit.Assert.assertTrue;
+
 import org.junit.Assert;
 import org.junit.Test;
 //import org.mockito.Mock;
@@ -8,7 +11,8 @@ public class UserDetailsTest {
 	// @Mock
 	// private UserDetails details;
 	UserDetails details = new UserDetails();
-	SampleEmails se=new SampleEmails();
+	SampleEmails se = new SampleEmails();
+
 	/**
 	 * We have created this Test case to check if the First name is proper & if
 	 * passes the regex pattern. The assertTrue will check if the result is true and
@@ -74,6 +78,26 @@ public class UserDetailsTest {
 	}
 
 	/**
+	 * Test case to check if the PhoneNo is valid then result is true and the it
+	 * will pass the test.
+	 */
+	@Test
+	public void isValidPhoneNo() {
+		boolean actualResult = details.phoneNum("91 953210786");
+		Assert.assertTrue(actualResult);
+	}
+
+	/**
+	 * Test case to check if the PhoneNo is not valid then result is true and the it
+	 * will fails the test.
+	 */
+	@Test
+	public void isInvalidPhoneNo() {
+		boolean actualResult1 = details.phoneNum("919866795861");
+		Assert.assertFalse(actualResult1);
+	}
+
+	/**
 	 * Test case to check if the password is valid then result is true and the it
 	 * will pass the test.
 	 */
@@ -94,39 +118,19 @@ public class UserDetailsTest {
 	}
 
 	/**
-	 * Test case to check if the PhoneNo is valid then result is true and the it
-	 * will pass the test.
+	 * Test method to check sample emails are valid
 	 */
 	@Test
-	public void isValidPhoneNo() {
-		boolean actualResult = details.pwd("91 9866349586");
-		Assert.assertTrue(actualResult);
-	}
-
-	/**
-	 * Test case to check if the PhoneNo is not valid then result is true and the
-	 * it will fails the test.
-	 */
-	@Test
-	public void isInvalidPhoneNo() {
-		boolean actualResult1 = details.pwd("919866795861");
-		Assert.assertFalse(actualResult1);
-	}
-	/**
-	 * Test method to check  sample emails are valid
-	 */
-	@Test
-	public void checkValidEmails()
-	{
+	public void checkValidEmails() {
 		boolean result = details.sampleEmails("abc111@abc.com");
 		Assert.assertTrue(result);
 	}
+
 	/**
 	 * Test method to check sample emails are invalid
 	 */
 	@Test
-	public void checkInValidEmails()
-	{
+	public void checkInValidEmails() {
 		boolean result1 = details.sampleEmails("abc");
 		Assert.assertFalse(result1);
 	}
