@@ -12,7 +12,7 @@ public class UserDetailsTest {
 	UserDetails details = new UserDetails();
 
 	/**
-	 * We have created this Test case to check if the first name is proper & if
+	 * We have created this Test case to check if the Last name is proper & if
 	 * passes the regex pattern. The assertTrue will check if the result is true and
 	 * the it will pass the test.
 	 */
@@ -25,7 +25,7 @@ public class UserDetailsTest {
 
 	/**
 	 * We have created this test case to check if the test fails if we pass the
-	 * wrong pattern for first name The assertFalse will check if the result is
+	 * wrong pattern for Last name The assertFalse will check if the result is
 	 * false and the it will pass the test.
 	 */
 	@Test
