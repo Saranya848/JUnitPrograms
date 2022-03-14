@@ -10,13 +10,12 @@ public class UserDetails {
 		input = "([A-Z]{1}[a-z]{2,})";
 		Pattern p = Pattern.compile(input);
 		Matcher m = p.matcher(firstName);
-		if (m.matches()) {
+		if (m.matches()==true) {
 			System.out.println("Valid Input");
 		} else {
 			System.out.println("Sorry!! InValid Input");
 			System.out.println("Try valid Input");
 		}
-		return false;
-
+		return m.matches();
 	}
 }
