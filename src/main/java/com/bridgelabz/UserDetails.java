@@ -6,10 +6,10 @@ import java.util.regex.Pattern;
 public class UserDetails {
 	public String input;
 
-	public boolean firstName(String firstName) {
+	public boolean lastName(String lastName) {
 		input = "([A-Z]{1}[a-z]{2,})";
 		Pattern p = Pattern.compile(input);
-		Matcher m = p.matcher(firstName);
+		Matcher m = p.matcher(lastName);
 		if (m.matches()) {
 			System.out.println("Valid Input");
 		} else {

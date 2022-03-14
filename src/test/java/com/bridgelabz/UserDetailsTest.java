@@ -18,7 +18,7 @@ public class UserDetailsTest {
 	 */
 	@Test
 	public void isValidInputFn() {
-		boolean actualResult = details.firstName("Saranya");
+		boolean actualResult = details.lastName("Siripurapu");
 		assertTrue(actualResult);
 
 	}
@@ -30,15 +30,8 @@ public class UserDetailsTest {
 	 */
 	@Test
 	public void isInvalidInputFn() {
-		boolean actualResult = details.firstName("sary");
+		boolean actualResult = details.lastName("siri");
 		assertFalse(actualResult);
 	}
-
-	//@Test
-	//public void isEqualInputFn(String firstName) {
-	//	boolean actualResult = details.firstName(firstName);
-	//	equals(actualResult);
-		// assertEqual(actualResult);
-	//}
 
 }
