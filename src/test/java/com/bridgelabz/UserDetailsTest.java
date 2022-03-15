@@ -83,7 +83,7 @@ public class UserDetailsTest {
 	 */
 	@Test
 	public void isValidPhoneNo() {
-		boolean actualResult = details.phoneNum("91 953210786");
+		boolean actualResult = details.phoneNum("+1 1234567890123");
 		Assert.assertTrue(actualResult);
 	}
 
@@ -93,7 +93,7 @@ public class UserDetailsTest {
 	 */
 	@Test
 	public void isInvalidPhoneNo() {
-		boolean actualResult1 = details.phoneNum("919866795861");
+		boolean actualResult1 = details.phoneNum("494361");
 		Assert.assertFalse(actualResult1);
 	}
 
