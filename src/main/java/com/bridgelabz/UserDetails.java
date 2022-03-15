@@ -34,7 +34,7 @@ public class UserDetails {
 	}
 
 	public boolean email(String email) {
-		input = "^[\\w!#$%&’*+/=?`{|}~^-]+(?:\\.[\\w!#$%&’*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$";
+		input = "^[\\w!#$%&â€™*+/=?`{|}~^-]+(?:\\.[\\w!#$%&â€™*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$";
 
 		// Pattern p = Pattern.complie("((?=.*\\d).{8,20})");
 		Pattern p = Pattern.compile(input);
@@ -49,7 +49,7 @@ public class UserDetails {
 	}
 
 	public boolean phoneNum(String phoneNum) {
-		input = "^[0-9]{2}\\s{1}[0-9]{10}$";
+		input = "^\\+(?:[0-9] ?){6,14}[0-9]$";
 		Pattern pattern = Pattern.compile(input);
 		Matcher matcher = pattern.matcher(phoneNum);
 		return matcher.matches();
@@ -72,7 +72,7 @@ public class UserDetails {
 
 	public boolean sampleEmails(String email) {
 
-		input = "^[\\w!#$%&’*+/=?`{|}~^-]+(?:\\.[\\w!#$%&’*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$";
+		input = "^[\\w!#$%&â€™*+/=?`{|}~^-]+(?:\\.[\\w!#$%&â€™*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$";
 		Pattern p = Pattern.compile(input);
 		Matcher m = p.matcher(email);
 		if (m.matches() == true) {
